@@ -27,7 +27,6 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
-  <ul style="overflow: hidden">
 
   {% if member.number_web == 1 %}
   {% assign label = member.web1 | split: "(" | first %}
@@ -54,16 +53,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   </li>
   {% endif %}
 
-  <!-- {% if member.number_web == 2 %}
-  <li> 🌐 {{ member.web1 | markdownify}} </li>
-  <li> 🌐 {{ member.web2 | markdownify}} </li>
-  {% endif %}
-
-  {% if member.number_web == 3 %}
-  <li> 🌐 {{ member.web1 | markdownify}} </li>
-  <li> 🌐 {{ member.web2 | markdownify}} </li>
-  <li> 🌐 {{ member.web3 | markdownify}} </li>
-  {% endif %} -->
+  <ul style="overflow: hidden">
 
   </ul>
 </div>
