@@ -99,7 +99,7 @@
 - name: Frannie Stephens 
   role: PhD
   photo: Frannie.jpg 
-  orcid:https://orcid.org/0009-0006-7807-399X 
+  orcid: https://orcid.org/0009-0006-7807-399X 
   description: I work on understanding the mysterious presence of some of the circadian rhythm genes in the developing Drosophila embryo, and uncovering which gene regulatory networks they may be involved in. 
 
 - name: Aniela Wroblewska 
