@@ -12,30 +12,68 @@ permalink: /team/
 
 Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
-## Staff
+## PI
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
 
-{% assign even_odd = number_printed | modulo: 2 %}
+  {% if member.role == "pi" %}
 
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
+    {% assign even_odd = number_printed | modulo: 2 %}
 
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
-  <ul style="overflow: hidden">
+    {% if even_odd == 0 %}
+    <div class="row">
+    {% endif %}
 
-  </ul>
-</div>
+    <div class="col-sm-6 clearfix">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
+           class="img-responsive"
+           width="25%"
+           style="float: left; margin-right: 15px;" />
 
-{% assign number_printed = number_printed | plus: 1 %}
+      <h4>{{ member.name }}</h4>
 
-{% if even_odd == 1 %}
-</div>
-{% endif %}
+      <ul style="overflow: hidden">
+
+        {% if member.title %}
+          <li>{{ member.title }}</li>
+        {% endif %}
+
+        {% if member.email %}
+          <li>{{ member.email }}</li>
+        {% endif %}
+
+        {% if member.orcid %}
+          <li>
+            <a href="https://orcid.org/{{ member.orcid }}">ORCID Profile</a>
+          </li>
+        {% endif %}
+
+        {% if member.linkedin %}
+          <li>
+            <a href="{{ member.linkedin }}">LinkedIn</a>
+          </li>
+        {% endif %}
+
+        {% if member.websites %}
+          {% for site in member.websites %}
+            {% if site.url %}
+              <li><a href="{{ site.url }}">{{ site.label }}</a></li>
+            {% else %}
+              <li>{{ site.label }}</li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+      </ul>
+    </div>
+
+    {% assign number_printed = number_printed | plus: 1 %}
+
+    {% if even_odd == 1 %}
+    </div>
+    {% endif %}
+
+  {% endif %}
 
 {% endfor %}
 
@@ -43,7 +81,6 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 {% if even_odd == 1 %}
 </div>
 {% endif %}
-
 
 ## PI
 {% assign number_printed = 0 %}
