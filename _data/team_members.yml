@@ -30,7 +30,7 @@
   orcid: 0000-0002-3749-3932
   websites: 
     - label: "Personal_web"
-      url: https://filonico.github.io/
+      # url: https://filonico.github.io/
   description: I am postdoc interested in the interplay between genome and complex trait evolution. Specifically, I am now focusing on how the molecular machinery underlying animal light detection has emerged and has been shaped, leveraging comparative genomics and single-cell transcriptomics on non bilaterian animal models. 
 
 - name: Dr Jess Ramsay 
