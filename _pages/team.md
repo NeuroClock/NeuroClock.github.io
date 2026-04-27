@@ -56,9 +56,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
       </a>
     </div>
   {% endif %}
-  <!-- <ul style="overflow: hidden">
 
-  </ul> -->
 </div>
 
 {% assign number_printed = number_printed | plus: 1 %}
