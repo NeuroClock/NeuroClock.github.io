@@ -29,7 +29,6 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
   <ul style="overflow: hidden">
 
-
   {% if member.number_web == 1 %}
   {% assign label = member.web1 | split: "(" | first %}
   {% assign url = member.web1 | split: "url:" | last | remove: ")" %}
@@ -41,6 +40,23 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   {% endif %}
 
   {% if member.number_web == 2 %}
+  {% assign label1 = member.web1 | split: "(" | first %}
+  {% assign url1 = member.web1 | split: "url:" | last | remove: ")" %}
+  {% assign label2 = member.web2 | split: "(" | first %}
+  {% assign url2 = member.web2 | split: "url:" | last | remove: ")" %}
+  <li>
+      🌐 <a href="{{ url1 }}" target="_blank">
+      {{ label1 | replace: "_", " " | capitalize }}
+      </a>
+  </li>
+  <li>
+      🌐 <a href="{{ url2 }}" target="_blank">
+      {{ label2 | replace: "_", " " | capitalize }}
+      </a>
+  </li>
+  {% endif %}
+
+  <!-- {% if member.number_web == 2 %}
   <li> 🌐 {{ member.web1 | markdownify}} </li>
   <li> 🌐 {{ member.web2 | markdownify}} </li>
   {% endif %}
@@ -49,7 +65,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   <li> 🌐 {{ member.web1 | markdownify}} </li>
   <li> 🌐 {{ member.web2 | markdownify}} </li>
   <li> 🌐 {{ member.web3 | markdownify}} </li>
-  {% endif %}
+  {% endif %} -->
 
   </ul>
 </div>
