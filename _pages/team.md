@@ -44,64 +44,81 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 </div>
 {% endif %}
 
-## PI
+## PostDoc
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
-  <!-- {% if member.role == "pi" %} -->
 
-    {% assign even_odd = number_printed | modulo: 2 %}
+{% assign even_odd = number_printed | modulo: 2 %}
 
-    {% if even_odd == 0 %}
-    <div class="row" style="margin-bottom: 30px;">
-    {% endif %}
+{% if even_odd == 0 %}
+<div class="row">
+{% endif %}
 
-    <div class="col-sm-6 d-flex align-items-start">
-      <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
-           class="img-responsive"
-           style="width: 25%; margin-right: 15px;" />
+<div class="col-sm-6 clearfix" style="margin-bottom: 20px;">
 
-      <div>
-        <h4 style="margin-top: 0;">{{ member.name }}</h4>
+  <!-- Top: image + info side-by-side -->
+  <div style="display: flex; align-items: flex-start;">
 
-        <ul class="list-unstyled">
-          {% if member.tittle %}
-            <li><i class="fa fa-graduation-cap"></i> {{ member.tittle }}</li>
-          {% endif %}
+    <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
+         class="img-responsive"
+         width="25%"
+         style="margin-right: 15px;" />
 
-          {% if member.email %}
-            <li><i class="fa fa-envelope"></i> {{ member.email }}</li>
-          {% endif %}
-          
-          {% if member.orcid %}
-            <li><i class="ai ai-orcid"></i> 
-              <a href="https://orcid.org/{{ member.orcid }}">ORCID Profile</a>
-            </li>
-          {% endif %}
-          
-          {% if member.linkedin %}
-            <li><i class="fa fa-linkedin"></i> 
-              <a href="{{ member.linkedin }}">LinkedIn</a>
-            </li>
-          {% endif %}
-        </ul>
-      </div>
+    <div>
+      <h4 style="margin-top: 0;">{{ member.name }}</h4>
+
+      <ul style="padding-left: 0; list-style: none;">
+
+        {% if member.title %}
+          <li>🎓 {{ member.title }}</li>
+        {% endif %}
+
+        {% if member.email %}
+          <li>📧 {{ member.email }}</li>
+        {% endif %}
+
+        {% if member.orcid %}
+          <li>🆔 <a href="https://orcid.org/{{ member.orcid }}">ORCID</a></li>
+        {% endif %}
+
+        {% if member.websites %}
+          {% for site in member.websites %}
+            {% if site.url %}
+              <li>🌐 <a href="{{ site.url }}">{{ site.label }}</a></li>
+            {% else %}
+              <li>🌐 {{ site.label }}</li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+      </ul>
     </div>
 
-    {% assign number_printed = number_printed | plus: 1 %}
-    {% assign next_even_odd = number_printed | modulo: 2 %}
+  </div>
 
-    {% if next_even_odd == 0 %}
+  <!-- Bottom: full-width description -->
+  {% if member.description %}
+    <div style="margin-top: 10px;">
+      <p style="margin: 0; text-align: left;">
+        {{ member.description }}
+      </p>
     </div>
-    {% endif %}
-
   {% endif %}
-{% endfor %}
 
-{% assign final_check = number_printed | modulo: 2 %}
-{% if final_check != 0 %}
+</div>
+
+{% assign number_printed = number_printed | plus: 1 %}
+
+{% if even_odd == 1 %}
 </div>
 {% endif %}
 
-## PostDoc
+{% endfor %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+{% if even_odd == 1 %}
+</div>
+{% endif %}
+
 
 ## Students
