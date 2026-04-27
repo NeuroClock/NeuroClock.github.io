@@ -30,16 +30,15 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   <ul style="overflow: hidden">
 
 
-{% if member.number_web == 1 %}
+  {% if member.number_web == 1 %}
   {% assign label = member.web1 | split: "(" | first %}
   {% assign url = member.web1 | split: "url:" | last | remove: ")" %}
-
   <li>
-    🌐 <a href="{{ url }}" target="_blank">
+      🌐 <a href="{{ url }}" target="_blank">
       {{ label | replace: "_", " " | capitalize }}
-    </a>
+      </a>
   </li>
-{% endif %}
+  {% endif %}
 
   {% if member.number_web == 2 %}
   <li> 🌐 {{ member.web1 | markdownify}} </li>
