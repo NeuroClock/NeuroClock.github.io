@@ -12,7 +12,8 @@ _includes/footer.html
 _pages/home.md
 
 - team
-
+_pages/team.md
+_data/team_members.yml
 
 
 # kk

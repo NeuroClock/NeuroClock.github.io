@@ -1,148 +1,112 @@
-- name: Milan P Allan
-  photo: Milan1.jpg
-  info: Professor
-  email: milan.allan@gmail.com
-  number_educ: 5
-  education1: Master ETHZ, Diplomarbeit with <a href="http://www.physik.uzh.ch/groups/osterwalder/">J Osterwalder</a>, University of Zurich
-  education2: PhD St Andrews (while at Cornell University) with <a href="http://dpmc.unige.ch/gr_baumberger/index.html">Felix Baumberger</a> and <a href="http://davisgroup.lassp.cornell.edu/">JC Davis</a>
-  education3: Postdoc Cornell
-  education4: <a href="http://www.ethfellows.ethz.ch/">ETH fellow</a> at ETHZ with <a href="https://qudev.phys.ethz.ch">Andreas Wallraff</a>
-  education5: <a href="https://www.universiteitleiden.nl/en/news/2017/07/milan-allan-wins-bryan-r.-coles-prize">Bryan R. Coles Prize 2017</a>
+- name: Bambos
+  role: pi
+  photo: bambos.png
+  tittle: Professor
+  email: cpk@leicester.ac.uk
+  orcid: 0000-0003-4889-7606
+  
+- name: Ezio
+  role: pi
+  photo: ezio.jfif
+  tittle: Professor
+  email: er6@leicester.ac.uk
+  orcid: 0000-0001-7297-4697
 
-- name: Jiasen Niu
-  photo: Jiasen.png
-  info: Leader Leiden Branch, started Oct 2020
-  email: niu@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD with <a href="http://www2.phy.pku.edu.cn/~xilin/group-members.html">Xi Lin</a> and <a href="http://faculty.pku.edu.cn/JianWangGroup/en/zhym/25393/list/index.htm">Jian Wei</a>, Peking University
-  education2: BSc Jilin University
+- name: Dr Susanna Campesan
+  role: PostDoc
+  photo:
+  orcid:  
+  description:  
 
-- name: Yudai Sato
-  photo: Sato.jpeg
-  info: Postdoc, started September 2023
-  email: jwlee0421@postech.ac.kr
-  number_educ: 2
-  education1: PhD with [Yukio Hasegawa](https://www.issp.u-tokyo.ac.jp/maincontents/organization/labs/hasegawa_group_en.html) at the University of Tokyo
-  education2: Master, University of Tokyo
+- name: Dr Celia Hansen 
+  role: Technician
+  photo:  
+  orcid:  
+  description:  
 
-- name: Thomas Gozlinski
-  photo: Thomas.jpg
-  info: Akademischer Rat, since November 2023
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD, KIT, with [Wulf Wulfhekel](https://www.int.kit.edu/1941_701.php)
-  education2: MSc KIT
+- name: Dr Filippo Nicolini 
+  role: PostDoc 
+  photo: Filippo Nicolini.jpg 
+  orcid: 0000-0002-3749-3932
+  websites: 
+    - label: "Personal_web"
+	    url: https://filonico.github.io/
+  description: I am postdoc interested in the interplay between genome and complex trait evolution. Specifically, I am now focusing on how the molecular machinery underlying animal light detection has emerged and has been shaped, leveraging comparative genomics and single-cell transcriptomics on non bilaterian animal models. 
 
-- name: Premakumar Yanda
-  photo: Yanda.png
-  info: Postdoc, since March 2025
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD, JNCASR, with A. Sundaresan
-  education2: MSc, Andhra University
+- name: Dr Jess Ramsay 
+  role: PostDoc 
+  photo:  
+  orcid:  
+  description:  
 
-- name: Stefan Rudel
-  photo: Stefan.png
-  info: Postdoc, shared with [Kloß lab](https://kloss.cup.uni-muenchen.de/dr-simon-kloss/)
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 3
-  education1: Postdoc LMU Munich with [Wolfgang Schnick](https://www.cup.uni-muenchen.de/ac/schnick/prof-dr-w-schnick/)
-  education2: PhD TUM and University of Marburg with [Florian Kraus](https://www.uni-marburg.de/de/fb15/arbeitsgruppen/anorganische_chemie/ag-kraus)
-  education3: MSc TUM
+- name: Dr Christiane Reick 
+  role: PostDoc 
+  photo:  
+  orcid:  
+  description:  
 
-- name: Devidas TR
-  photo: Devidas.png
-  info: Postdoc
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: Postdoc Bar-Ilan with [Beena Kalisky](https://beenalab.biu.ac.il)
-  education2: PhD Homi Bhabha National Institute
-  education3: MSc National Institute of Technology - Tiruchirappalli
 
-- name: Yuval Nitzav
-  photo: Yuval.png
-  info: Postdoc
-  email: benschop@physics.leidenuniv.nl
-  number_educ: 2
-  education1: PhD Technion with [Amit Kanigel](https://phsites.technion.ac.il/arpes/)
-  education2: MSc Technion
+- name: Dr Emily Sample 
+  role: PostDoc 
+  photo:  
+  orcid:  
+  description:  
 
-- name: Amber Mozes
-  photo: Amber.png
-  info: PhD Student, started September 2021
-  email: b
-  number_educ: 2
-  education1: Master Applied Physics, TU Delft
-  education2: Casimir/Nanofront PhD fellowship
-  education3:
-  education4:
+- name: Dr Dongfeng Wang 
+  role: PostDoc
+  photo:  
+  orcid:  
+  website: 
+	- label: "google_scholar"
+	  url: https://scholar.google.com/citations?user=VTdPrIUAAAAJ&hl=en
+  description: I work with opsins in mosquitoes and fruit flies. I am interested in the evolution of vision systems and aim to understand how visual behaviour is encoded in the genome.
 
-- name: Maialen Ortego Larrazabal
-  photo: Maialen.png
-  info: PhD Student within a collaboration with the <a href="http://www.ingmarswart.nl">Swart Lab</a>
-  email: b
-  number_educ: 2
-  education1: Master Leiden University
-  education2: BSc, University of the Basque Country
-  education3:
-  education4:
+- name: Lorena Rosen 
+  role: PostDoc
+  role2: BioClocks UK Coordinator
+  photo: Lorena_R b+w.jpg
+  website:
+    - label: "LinkedIn"
+	  url: https://www.linkedin.com/in/lorena-rosen-429012174/ 
+	- label: "BioClocks"
+	  url: https://www.bioclocks.uk
+  description: I coordinate our national research network- BioClocks UK. BioClocks UK is a hub for biological rhythms research in the UK, supporting researchers to deliver impact through stakeholder interactions, outreach, training, and resource production. Our research network meets in person at our bi-annual Clock Clubs where hundreds of academics from around the country come together to share their research, learn new skills, and connect with members of the community. 
 
-- name: Sanghun Lee 이상헌
-  photo: Sanghun.jpg
-  info: PhD Student
-  email: b
-  number_educ: 2
-  education1: Master Yonsei with [Doohee Cho](http://physicsyonsei.kr/en/people/professor?idx=48)
-  education2: BSc, Yonsei University
-  education3:
-  education4:
 
-- name: Louw Feenstra
-  photo: Louw.jpeg
-  info: PhD Student, started November 2024
-  email: b
-  number_educ: 2
-  education1: BSc, Leiden University
-  education2: MSc, LMU Munich, with [Christian Pfleiderer](https://www.professoren.tum.de/en/pfleiderer-christian)
-  education3:
-  education4:
+- name: Zainullah Bacha 
+  role: PhD
+  photo: Zainullah Bacha.pdf 
+  orcid: https://orcid.org/0009-0006-1786-1773 
+  websites:
+    - label: LinkedIn
+	  url: http://www.linkedin.com/in/zainullah-bacha-09b0361a5 
+	- label: INCITE
+	  url: https://incite.entu.cas.cz/ 
+	description: My project focuses on circadian and seasonal biology of the black soldier fly, particularly understanding how circadian and seasonal environmental factors, namely photoperiod and temperature mediate the life cycle of the black soldier fly (BSF, Hermetia illucens). In addition, I work on behaviour and locomotive activity of BSF, understanding the basic chronobiology of BSF and effect of different photoperiod and temperature on their growth and development). 
 
-- name: Ilse Kuijf
-  photo: ilse.jpeg
-  info: Shared PhD student in the [van Nieuwenburg group](https://evert.info)
-  email: Bastiaans@Physics.LeidenUniv.nl
-  number_educ: 1
-  education1: Master Leiden University
+- name: Ruman Khalid 
+  role: PhD
+  photo:  
+  orcid:  
+  description:  
 
-- name: Fabian Steinmeyer
-  photo: Fabian.jpeg
-  info: PhD Student, started December 2025
-  email: b
-  number_educ: 2
-  education1: MSc Leiden University with [Kaveh Lahabi](https://lahabilab.com) and [Simon Gröblacher](https://groeblacherlab.tudelft.nl/)
-  education2: BSc Friedrich-Alexander-Universität Erlangen-Nürnberg
-  education3:
-  education4:
+- name: Yi Liao 
+  role: PhD
+  photo:  
+  orcid:  
+  description:  
 
-- name: Marios-Apollon Marangos
-  photo: apollon.png
-  info: Engineer
-  email: Bastiaans@Physics.LeidenUniv.nl
-  number_educ: 1
-  education1: Master Physics TUM, with Kiutra
+- name: Frannie Stephens 
+  role: PhD
+  photo: Frannie.jpg 
+  orcid:https://orcid.org/0009-0006-7807-399X 
+  description: I work on understanding the mysterious presence of some of the circadian rhythm genes in the developing Drosophila embryo, and uncovering which gene regulatory networks they may be involved in. 
 
-- name: Anna Tymofieieva
-  photo: anna.png
-  info: Admin
-  email: Bastiaans@Physics.LeidenUniv.nl
-  number_educ: 1
-  education1: Nationale Pädagogische H.-S.-Skoworoda-Universität, Charkiw
-
-- name: "This could be you !"
-  photo: rock.jpg
-  info: See <a href="http://www.allanlab.org/vacancies">openings</a> for more info
-  email: milan.allan@gmail.com
-  number_educ: 0
-  education1:
-  education2:
-  education3:
+- name: Aniela Wroblewska 
+  role: PhD
+  photo:  
+  orcid: https://orcid.org/0009-0009-7442-7561 
+  websites:
+	- lable: LinkedIn
+	  url: https://www.linkedin.com/in/aniela-wroblewska-78772922a/   
+  description: I am a MIBTP PhD student working on development of meal insects for the production of high value biologicals. My project aims to develop black soldier fly (BSF) Hermetia illucens as an efficient and scalable platform to produce proteins. In my work, I use variety of systems including E.coli, D. melanogaster and mammalian cell lines. 
