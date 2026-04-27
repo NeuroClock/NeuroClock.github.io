@@ -3,6 +3,9 @@
 
 # run
 - layouts
+-- home layout
+_layouts/homelay.html
+
 
 
 - header
