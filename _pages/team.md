@@ -29,33 +29,36 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
 
   {% if member.number_web == 1 %}
-  {% assign label = member.web1 | split: "(" | first %}
-  {% assign url = member.web1 | split: "url:" | last | remove: ")" %}
-    🌐 <a href="{{ url }}" target="_blank">
-    {{ label | replace: "_", " " | capitalize }}
-    </a>
+    {% assign label = member.web1 | split: "(" | first %}
+    {% assign url = member.web1 | split: "url:" | last | remove: ")" %}
+    <div>
+      🌐 <a href="{{ url }}" target="_blank">
+        {{ label | replace: "_", " " | capitalize }}
+      </a>
+    </div>
   {% endif %}
 
   {% if member.number_web == 2 %}
-  {% assign label1 = member.web1 | split: "(" | first %}
-  {% assign url1 = member.web1 | split: "url:" | last | remove: ")" %}
-  {% assign label2 = member.web2 | split: "(" | first %}
-  {% assign url2 = member.web2 | split: "url:" | last | remove: ")" %}
-  <li>
+    {% assign label1 = member.web1 | split: "(" | first %}
+    {% assign url1 = member.web1 | split: "url:" | last | remove: ")" %}
+    {% assign label2 = member.web2 | split: "(" | first %}
+    {% assign url2 = member.web2 | split: "url:" | last | remove: ")" %}
+
+    <div>
       🌐 <a href="{{ url1 }}" target="_blank">
-      {{ label1 | replace: "_", " " | capitalize }}
+        {{ label1 | replace: "_", " " | capitalize }}
       </a>
-  </li>
-  <li>
+    </div>
+
+    <div>
       🌐 <a href="{{ url2 }}" target="_blank">
-      {{ label2 | replace: "_", " " | capitalize }}
+        {{ label2 | replace: "_", " " | capitalize }}
       </a>
-  </li>
+    </div>
   {% endif %}
+  <!-- <ul style="overflow: hidden">
 
-  <ul style="overflow: hidden">
-
-  </ul>
+  </ul> -->
 </div>
 
 {% assign number_printed = number_printed | plus: 1 %}
