@@ -19,7 +19,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 {% for member in site.data.team_members %}
   {% if member.role == "PI" %}
 
-    {% if count modulo 2 == 0 %}
+    {% if count | modulo: 2 == 0 %}
     <div class="row">
     {% endif %}
 
@@ -37,14 +37,14 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
     {% assign count = count | plus: 1 %}
 
-    {% if count modulo 2 == 0 %}
+    {% if count | modulo: 2 == 0 %}
     </div>
     {% endif %}
 
   {% endif %}
 {% endfor %}
 
-{% if count modulo 2 != 0 %}
+{% if count | modulo: 2 != 0 %}
 </div>
 {% endif %}
 
@@ -55,7 +55,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 {% for member in site.data.team_members %}
   {% if member.role == "PostDoc" %}
 
-    {% if count modulo 2 == 0 %}
+    {% if count | modulo: 2 == 0 %}
     <div class="row">
     {% endif %}
 
@@ -108,13 +108,13 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
     {% assign count = count | plus: 1 %}
 
-    {% if count modulo 2 == 0 %}
+    {% if count | modulo: 2 == 0 %}
     </div>
     {% endif %}
 
   {% endif %}
 {% endfor %}
 
-{% if count modulo 2 != 0 %}
+{% if count | modulo: 2 != 0 %}
 </div>
 {% endif %}
