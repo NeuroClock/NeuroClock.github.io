@@ -81,7 +81,7 @@
     - label: LinkedIn
       url: http://www.linkedin.com/in/zainullah-bacha-09b0361a5 
     - label: INCITE
-      url: https://incite.entu.cas.cz/ 
+      # url: https://incite.entu.cas.cz/ 
 	description: My project focuses on circadian and seasonal biology of the black soldier fly, particularly understanding how circadian and seasonal environmental factors, namely photoperiod and temperature mediate the life cycle of the black soldier fly (BSF, Hermetia illucens). In addition, I work on behaviour and locomotive activity of BSF, understanding the basic chronobiology of BSF and effect of different photoperiod and temperature on their growth and development). 
 
 - name: Ruman Khalid 
