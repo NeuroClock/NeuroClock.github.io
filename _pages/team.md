@@ -32,11 +32,9 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   {% if member.number_web == 1 %}
   {% assign label = member.web1 | split: "(" | first %}
   {% assign url = member.web1 | split: "url:" | last | remove: ")" %}
-  <li>
-      🌐 <a href="{{ url }}" target="_blank">
-      {{ label | replace: "_", " " | capitalize }}
-      </a>
-  </li>
+    🌐 <a href="{{ url }}" target="_blank">
+    {{ label | replace: "_", " " | capitalize }}
+    </a>
   {% endif %}
 
   {% if member.number_web == 2 %}
