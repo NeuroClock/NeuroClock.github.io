@@ -12,187 +12,109 @@ permalink: /team/
 
 Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
+
 ## PI
-{% assign number_printed = 0 %}
+{% assign count = 0 %}
+
 {% for member in site.data.team_members %}
+  {% if member.role == "PI" %}
 
-{% assign even_odd = number_printed | modulo: 2 %}
+    {% if count modulo 2 == 0 %}
+    <div class="row">
+    {% endif %}
 
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
+    <div class="col-sm-6 clearfix">
+      <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
+           class="img-responsive"
+           width="25%"
+           style="float: left; margin-right: 15px;" />
 
-<div class="col-sm-6 clearfix">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
-  <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
-  <ul style="overflow: hidden">
+      <h4>{{ member.name }}</h4>
+      <i>{{ member.info }}</i>
 
-  </ul>
-</div>
+      <ul style="overflow: hidden"></ul>
+    </div>
 
-{% assign number_printed = number_printed | plus: 1 %}
+    {% assign count = count | plus: 1 %}
 
-{% if even_odd == 1 %}
-</div>
-{% endif %}
+    {% if count modulo 2 == 0 %}
+    </div>
+    {% endif %}
 
+  {% endif %}
 {% endfor %}
 
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
+{% if count modulo 2 != 0 %}
 </div>
 {% endif %}
 
 ## PostDoc
-{% assign number_printed = 0 %}
-{% for member in site.data.team_members %}
 
-{% assign even_odd = number_printed | modulo: 2 %}
-
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
-
-<div class="col-sm-6 clearfix" style="margin-bottom: 20px;">
-
-  <!-- Top: image + info side-by-side -->
-  <div style="display: flex; align-items: flex-start;">
-
-    <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
-         class="img-responsive"
-         width="25%"
-         style="margin-right: 15px;" />
-
-    <div>
-      <h4 style="margin-top: 0;">{{ member.name }}</h4>
-
-      <ul style="padding-left: 0; list-style: none;">
-
-        {% if member.title %}
-          <li>🎓 {{ member.title }}</li>
-        {% endif %}
-
-        {% if member.email %}
-          <li>📧 {{ member.email }}</li>
-        {% endif %}
-
-        {% if member.orcid %}
-          <li>🆔 <a href="https://orcid.org/{{ member.orcid }}">ORCID</a></li>
-        {% endif %}
-
-        {% if member.websites %}
-          {% for site in member.websites %}
-            {% if site.url %}
-              <li>🌐 <a href="{{ site.url }}">{{ site.label }}</a></li>
-            {% else %}
-              <li>🌐 {{ site.label }}</li>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- Bottom: full-width description -->
-  {% if member.description %}
-    <div style="margin-top: 10px;">
-      <p style="margin: 0; text-align: left;">
-        {{ member.description }}
-      </p>
-    </div>
-  {% endif %}
-
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-{% endfor %}
-
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
-
-## Students
-## PostDoc
-{% assign number_printed = 0 %}
+{% assign count = 0 %}
 
 {% for member in site.data.team_members %}
+  {% if member.role == "PostDoc" %}
 
-{% assign even_odd = number_printed | modulo: 2 %}
+    {% if count modulo 2 == 0 %}
+    <div class="row">
+    {% endif %}
 
-{% if even_odd == 0 %}
-<div class="row">
-{% endif %}
+    <div class="col-sm-6 clearfix" style="margin-bottom: 20px;">
 
-<div class="col-sm-6 clearfix" style="margin-bottom: 20px;">
+      <div style="display: flex; align-items: flex-start;">
 
-  <div style="display: flex; align-items: flex-start;">
+        <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
+             class="img-responsive"
+             width="25%"
+             style="margin-right: 15px;" />
 
-    <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
-         class="img-responsive"
-         width="25%"
-         style="margin-right: 15px;" />
+        <div>
+          <h4 style="margin-top: 0;">{{ member.name }}</h4>
 
-    <div>
-      <h4 style="margin-top: 0;">{{ member.name }}</h4>
+          <ul style="padding-left: 0; list-style: none;">
 
-      <ul style="padding-left: 0; list-style: none;">
-
-        {% if member.title %}
-          <li>🎓 {{ member.title }}</li>
-        {% endif %}
-
-        {% if member.email %}
-          <li>📧 {{ member.email }}</li>
-        {% endif %}
-
-        {% if member.orcid %}
-          <li>🆔 <a href="https://orcid.org/{{ member.orcid }}">ORCID</a></li>
-        {% endif %}
-
-        {% if member.websites %}
-          {% for w in member.websites %}
-            {% if w.url %}
-              <li>🌐 <a href="{{ w.url }}">{{ w.label }}</a></li>
-            {% else %}
-              <li>🌐 {{ w.label }}</li>
+            {% if member.title %}
+              <li>🎓 {{ member.title }}</li>
             {% endif %}
-          {% endfor %}
-        {% endif %}
 
-      </ul>
+            {% if member.email %}
+              <li>📧 {{ member.email }}</li>
+            {% endif %}
+
+            {% if member.orcid %}
+              <li>🆔 <a href="https://orcid.org/{{ member.orcid }}">ORCID</a></li>
+            {% endif %}
+
+            {% if member.websites %}
+              {% for w in member.websites %}
+                {% if w.url %}
+                  <li>🌐 <a href="{{ w.url }}">{{ w.label }}</a></li>
+                {% else %}
+                  <li>🌐 {{ w.label }}</li>
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+
+          </ul>
+        </div>
+
+      </div>
+
+      {% if member.description %}
+        <p style="margin-top: 10px;">{{ member.description }}</p>
+      {% endif %}
+
     </div>
 
-  </div>
+    {% assign count = count | plus: 1 %}
 
-  {% if member.description %}
-    <div style="margin-top: 10px;">
-      <p style="margin: 0; text-align: left;">
-        {{ member.description }}
-      </p>
+    {% if count modulo 2 == 0 %}
     </div>
+    {% endif %}
+
   {% endif %}
-
-</div>
-
-{% assign number_printed = number_printed | plus: 1 %}
-
-{% if even_odd == 1 %}
-</div>
-{% endif %}
-
 {% endfor %}
 
-{% assign even_odd = number_printed | modulo: 2 %}
-{% if even_odd == 1 %}
+{% if count modulo 2 != 0 %}
 </div>
 {% endif %}
