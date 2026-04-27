@@ -2,11 +2,11 @@
 - where to modify
 
 # run
-- head
+- header
+_includes/header.html
 
-
-- tail
-
+- footer
+_includes/footer.html
 
 - home
 _pages/home.md
