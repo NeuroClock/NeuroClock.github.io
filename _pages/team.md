@@ -15,7 +15,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 ## PI
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
-  {% if member.role == "pi" %}
+  <!-- {% if member.role == "pi" %} -->
 
     {% assign even_odd = number_printed | modulo: 2 %}
 
