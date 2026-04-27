@@ -12,7 +12,7 @@ permalink: /team/
 
 Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
-## pi
+## PI
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
   {% if member.role == "pi" %}
@@ -70,7 +70,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 </div>
 {% endif %}
 
-## postdoc
+## PostDoc
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
   
@@ -130,7 +130,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   </div>
 {% endif %}
 
-## students
+## Students
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
   
