@@ -1,1 +1,18 @@
-git remote set-url origin git@github.com:NeuroClock/neuroclock.github.io.git
+# philosophy
+- where to modify
+
+# run
+- head
+
+
+- tail
+
+
+- home
+_pages/home.md
+
+- team
+
+
+
+# kk
