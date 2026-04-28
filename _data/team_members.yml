@@ -19,7 +19,7 @@
 
 
 - name: Dr Susanna Campesan
-  role: PostDoc
+  role: postdoc
   photo:
   orcid:  
   description:  
@@ -31,7 +31,7 @@
   description:  
 
 - name: Dr Filippo Nicolini 
-  role: PostDoc 
+  role: postdoc 
   photo: Filippo Nicolini.jpg 
   orcid: 0000-0002-3749-3932
   websites: 
@@ -40,26 +40,26 @@
   description: I am postdoc interested in the interplay between genome and complex trait evolution. Specifically, I am now focusing on how the molecular machinery underlying animal light detection has emerged and has been shaped, leveraging comparative genomics and single-cell transcriptomics on non bilaterian animal models. 
 
 - name: Dr Jess Ramsay 
-  role: PostDoc 
+  role: postdoc 
   photo:  
   orcid:  
   description:  
 
 - name: Dr Christiane Reick 
-  role: PostDoc 
+  role: postdoc 
   photo:  
   orcid:  
   description:  
 
 
 - name: Dr Emily Sample 
-  role: PostDoc 
+  role: postdoc 
   photo:  
   orcid:  
   description:  
 
 - name: Dr Dongfeng Wang 
-  role: PostDoc
+  role: postdoc
   photo:  
   orcid:  
   websites: 
@@ -68,7 +68,7 @@
   description: I work with opsins in mosquitoes and fruit flies. I am interested in the evolution of vision systems and aim to understand how visual behaviour is encoded in the genome.
 
 - name: Lorena Rosen 
-  role: PostDoc
+  role: postdoc
   role2: BioClocks UK Coordinator
   photo: Lorena_R b+w.jpg
   website:
