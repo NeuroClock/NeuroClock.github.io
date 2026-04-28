@@ -12,7 +12,6 @@ permalink: /team/
 
 Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
-
 ## PI
 {::nomarkdown}
 {% assign number_printed = 0 %}
@@ -27,22 +26,10 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }}</i>
+  <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
+  <ul style="overflow: hidden">
 
-  {% if member.number_web == 1 %}
-    {% assign label = member.web1 | split: "(" | first %}
-    {% assign url = member.web1 | split: "url:" | last | remove: ")" | strip %}
-    <div>🌐 <a href="{{ url }}" target="_blank">{{ label | replace: "_", " " | capitalize }}</a></div>
-  {% endif %}
-
-  {% if member.number_web == 2 %}
-    {% assign label1 = member.web1 | split: "(" | first %}
-    {% assign url1 = member.web1 | split: "url:" | last | remove: ")" | strip %}
-    {% assign label2 = member.web2 | split: "(" | first %}
-    {% assign url2 = member.web2 | split: "url:" | last | remove: ")" | strip %}
-    <div>🌐 <a href="{{ url1 }}" target="_blank">{{ label1 | replace: "_", " " | capitalize }}</a></div>
-    <div>🌐 <a href="{{ url2 }}" target="_blank">{{ label2 | replace: "_", " " | capitalize }}</a></div>
-  {% endif %}
+  </ul>
 </div>
 
 {% assign number_printed = number_printed | plus: 1 %}
@@ -61,6 +48,83 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
 
 ## PostDoc
+{:/nomarkdown}
+
+{% assign number_printed = 0 %}
+{% for member in site.data.team_members %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+
+{% if even_odd == 0 %}
+<div class="row">
+{% endif %}
+
+<div class="col-sm-6 clearfix" style="margin-bottom: 20px;">
+
+  <!-- Top: image + info side-by-side -->
+  <div style="display: flex; align-items: flex-start;">
+
+    <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}"
+         class="img-responsive"
+         width="25%"
+         style="margin-right: 15px;" />
+
+    <div>
+      <h4 style="margin-top: 0;">{{ member.name }}</h4>
+
+      <ul style="padding-left: 0; list-style: none;">
+
+        {% if member.title %}
+          <li>🎓 {{ member.title }}</li>
+        {% endif %}
+
+        {% if member.email %}
+          <li>📧 {{ member.email }}</li>
+        {% endif %}
+
+        {% if member.orcid %}
+          <li>🆔 <a href="https://orcid.org/{{ member.orcid }}">ORCID</a></li>
+        {% endif %}
+
+        {% if member.websites %}
+          {% for site in member.websites %}
+            {% if site.url %}
+              <li>🌐 <a href="{{ site.url }}">{{ site.label }}</a></li>
+            {% else %}
+              <li>🌐 {{ site.label }}</li>
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Bottom: full-width description -->
+  {% if member.description %}
+    <div style="margin-top: 10px;">
+      <p style="margin: 0; text-align: left;">
+        {{ member.description }}
+      </p>
+    </div>
+  {% endif %}
+
+</div>
+
+{% assign number_printed = number_printed | plus: 1 %}
+
+{% if even_odd == 1 %}
+</div>
+{% endif %}
+
+{% endfor %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+{% if even_odd == 1 %}
+</div>
+{% endif %}
+{:/nomarkdown}
 
 
 ## Students
