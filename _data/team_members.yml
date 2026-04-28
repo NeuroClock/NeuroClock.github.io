@@ -82,7 +82,7 @@
 - name: Zainullah Bacha 
   role: PhD
   photo: Zainullah Bacha.pdf 
-  orcid: https://orcid.org/0009-0006-1786-1773 
+  orcid: 0009-0006-1786-1773 
   websites:
     - label: LinkedIn
       url: "http://www.linkedin.com/in/zainullah-bacha-09b0361a5"
@@ -111,7 +111,7 @@
 - name: Aniela Wroblewska 
   role: PhD
   photo:  
-  orcid: https://orcid.org/0009-0009-7442-7561 
+  orcid: 0009-0009-7442-7561 
   websites:
     - lable: "LinkedIn"
       url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"   
