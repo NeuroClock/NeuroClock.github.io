@@ -26,36 +26,21 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} </i>
-  <!--<br>email: <{{ member.email }}></i> -->
+  <i>{{ member.info }}</i>
 
   {% if member.number_web == 1 %}
     {% assign label = member.web1 | split: "(" | first %}
-    {% assign url = member.web1 | split: "url:" | last | remove: ")" %}
-    <div>
-      🌐 <a href="{{ url }}" target="_blank">
-        {{ label | replace: "_", " " | capitalize }}
-      </a>
-    </div>
+    {% assign url = member.web1 | split: "url:" | last | remove: ")" | strip %}
+    <div>🌐 <a href="{{ url }}" target="_blank">{{ label | replace: "_", " " | capitalize }}</a></div>
   {% endif %}
 
   {% if member.number_web == 2 %}
     {% assign label1 = member.web1 | split: "(" | first %}
-    {% assign url1 = member.web1 | split: "url:" | last | remove: ")" %}
+    {% assign url1 = member.web1 | split: "url:" | last | remove: ")" | strip %}
     {% assign label2 = member.web2 | split: "(" | first %}
-    {% assign url2 = member.web2 | split: "url:" | last | remove: ")" %}
-
-    <div>
-      🌐 <a href="{{ url1 }}" target="_blank">
-        {{ label1 | replace: "_", " " | capitalize }}
-      </a>
-    </div>
-
-    <div>
-      🌐 <a href="{{ url2 }}" target="_blank">
-        {{ label2 | replace: "_", " " | capitalize }}
-      </a>
-    </div>
+    {% assign url2 = member.web2 | split: "url:" | last | remove: ")" | strip %}
+    <div>🌐 <a href="{{ url1 }}" target="_blank">{{ label1 | replace: "_", " " | capitalize }}</a></div>
+    <div>🌐 <a href="{{ url2 }}" target="_blank">{{ label2 | replace: "_", " " | capitalize }}</a></div>
   {% endif %}
 
 </div>
@@ -73,7 +58,8 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 </div>
 {% endif %}
 
-# PostDoc
+
+## PostDoc
 
 
-# Students
+## Students
