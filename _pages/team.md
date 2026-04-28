@@ -48,7 +48,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 {:/nomarkdown}
 
 
-## PostDoc
+## PostDoc/Technician {#postdoc}
 {::nomarkdown}
 
 {% assign number_printed = 0 %}
