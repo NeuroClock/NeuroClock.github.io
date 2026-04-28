@@ -34,9 +34,9 @@
   role: postdoc 
   photo: Filippo Nicolini.jpg 
   orcid: 0000-0002-3749-3932
-  websites: 
+  websites:
     - label: "Personal_web"
-      # url: https://filonico.github.io/
+      url: "https://filonico.github.io/"
   description: I am postdoc interested in the interplay between genome and complex trait evolution. Specifically, I am now focusing on how the molecular machinery underlying animal light detection has emerged and has been shaped, leveraging comparative genomics and single-cell transcriptomics on non bilaterian animal models. 
 
 - name: Dr Jess Ramsay 
@@ -113,6 +113,6 @@
   photo:  
   orcid: 0009-0009-7442-7561
   websites:
-  - lable: LinkedIn
-    url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"
+    - lable: "LinkedIn"
+      url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"
   description: I am a MIBTP PhD student working on development of meal insects for the production of high value biologicals. My project aims to develop black soldier fly (BSF) Hermetia illucens as an efficient and scalable platform to produce proteins. In my work, I use variety of systems including E.coli, D. melanogaster and mammalian cell lines. 
