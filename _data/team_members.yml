@@ -111,8 +111,8 @@
 - name: Aniela Wroblewska 
   role: PhD
   photo:  
-  orcid: 0009-0009-7442-7561 
+  orcid: 0009-0009-7442-7561
   websites:
-    - lable: LinkedIn
-      url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"
+  - lable: LinkedIn
+    url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"
   description: I am a MIBTP PhD student working on development of meal insects for the production of high value biologicals. My project aims to develop black soldier fly (BSF) Hermetia illucens as an efficient and scalable platform to produce proteins. In my work, I use variety of systems including E.coli, D. melanogaster and mammalian cell lines. 
