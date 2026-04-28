@@ -48,7 +48,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
 
 ## PostDoc
-{nomarkdown}
+{::nomarkdown}
 
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
