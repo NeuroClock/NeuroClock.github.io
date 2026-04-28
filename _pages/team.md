@@ -14,6 +14,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
 
 ## PI
+{::nomarkdown}
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
 
@@ -23,7 +24,6 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 <div class="row">
 {% endif %}
 
-{::nomarkdown}
 <div class="col-sm-6 clearfix">
   <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
@@ -44,7 +44,6 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
     <div>🌐 <a href="{{ url2 }}" target="_blank">{{ label2 | replace: "_", " " | capitalize }}</a></div>
   {% endif %}
 </div>
-{:/nomarkdown}
 
 {% assign number_printed = number_printed | plus: 1 %}
 
@@ -58,6 +57,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 {% if even_odd == 1 %}
 </div>
 {% endif %}
+{:/nomarkdown}
 
 
 ## PostDoc
