@@ -28,6 +28,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
   <h4>{{ member.name }}</h4>
   <i>{{ member.info }}</i>
 
+  {::nomarkdown}
   {% if member.number_web == 1 %}
     {% assign label = member.web1 | split: "(" | first %}
     {% assign url = member.web1 | split: "url:" | last | remove: ")" | strip %}
@@ -42,6 +43,8 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
     <div>🌐 <a href="{{ url1 }}" target="_blank">{{ label1 | replace: "_", " " | capitalize }}</a></div>
     <div>🌐 <a href="{{ url2 }}" target="_blank">{{ label2 | replace: "_", " " | capitalize }}</a></div>
   {% endif %}
+  {:/nomarkdown}
+
 
 </div>
 
