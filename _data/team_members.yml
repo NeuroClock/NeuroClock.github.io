@@ -105,7 +105,7 @@
 - name: Frannie Stephens 
   role: PhD
   photo: Frannie.jpg 
-  orcid: https://orcid.org/0009-0006-7807-399X 
+  orcid: 0009-0006-7807-399X 
   description: I work on understanding the mysterious presence of some of the circadian rhythm genes in the developing Drosophila embryo, and uncovering which gene regulatory networks they may be involved in. 
 
 - name: Aniela Wroblewska 
@@ -113,6 +113,6 @@
   photo:  
   orcid: 0009-0009-7442-7561 
   websites:
-    - lable: "LinkedIn"
-      url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"   
+    - lable: LinkedIn
+      url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"
   description: I am a MIBTP PhD student working on development of meal insects for the production of high value biologicals. My project aims to develop black soldier fly (BSF) Hermetia illucens as an efficient and scalable platform to produce proteins. In my work, I use variety of systems including E.coli, D. melanogaster and mammalian cell lines. 
