@@ -134,7 +134,7 @@ Jump to [PI](#pi), [PostDoc/Technician](#postdoc), [Students](#students)
 
 {% assign number_printed = 0 %}
 {% for member in site.data.team_members %}
-{% if member.role == "phd" or member.role == "master" %}
+{% if member.role == "PhD" or member.role == "Master" %}
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
