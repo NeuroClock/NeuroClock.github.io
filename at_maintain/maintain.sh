@@ -1,1 +1,12 @@
-git remote set-url origin git@github.com:NeuroClock/neuroclock.github.io.git
+#!/usr/bin/env bash
+
+#github
+set repo
+
+# clon
+git clone
+
+# cp_push
+git push to 
+
+# kk

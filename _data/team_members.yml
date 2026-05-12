@@ -1,22 +1,22 @@
-- name: Bambos
+- name: Professor Bambos
   role: pi
   photo: bambos.png
   tittle: Professor
   email: cpk@leicester.ac.uk
   orcid: 0000-0003-4889-7606
-  number_web: 2
-  web1: xxx(url:github.com)
-  web2: xxxx(url:https://x.com/i/grok)
+  websites:
+    - label: "Personal_web"
+      url: "https://le.ac.uk/people/charalambos-kyriacou"
 
-- name: Ezio
+- name: Professor Ezio
   role: pi
   photo: ezio.jfif
   tittle: Professor
   email: er6@leicester.ac.uk
   orcid: 0000-0001-7297-4697
-  number_web: 1
-  web1: xxx(url:https://github.com)
-
+  websites:
+    - label: "Personal_web"
+      url: "https://le.ac.uk/people/ezio-rosato"
 
 - name: Dr Susanna Campesan
   role: postdoc
