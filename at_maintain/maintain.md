@@ -22,7 +22,7 @@ _data/team_members.yml
 images/teampic
 
 - vacacies
--pages/
+_pages/
 
 - putin
   <!-- <ul style="overflow: hidden">
