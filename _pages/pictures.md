@@ -2,7 +2,7 @@
 title: "NeuroClock Lab - Pictures"
 layout: piclay
 excerpt: "NeuroClock Lab -- Pictures"
-permalink: /pictures/
+permalink: /old.pictures/
 ---
 
 <!-- # Pictures
