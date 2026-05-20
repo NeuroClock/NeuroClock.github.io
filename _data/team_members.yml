@@ -64,19 +64,19 @@
   orcid:  0000-0002-3278-0801
   websites: 
     - label: "google_scholar"
-      url: https://scholar.google.com/citations?user=VTdPrIUAAAAJ&hl=en
+      url: "https://scholar.google.com/citations?user=VTdPrIUAAAAJ&hl=en"
   description: I work with opsins in mosquitoes and fruit flies. I am interested in the evolution of vision systems and aim to understand how visual behaviour is encoded in the genome.
 
 - name: Lorena Rosen 
   role: postdoc
   role2: BioClocks UK Coordinator
   photo: lorena.jpg
-  website:
+  websites:
     - label: "LinkedIn"
-      url: https://www.linkedin.com/in/lorena-rosen-429012174/ 
+      url: "https://www.linkedin.com/in/lorena-rosen-429012174/"
     - label: "BioClocks"
-      url: https://www.bioclocks.uk
-  description: I coordinate our national research network- BioClocks UK. BioClocks UK is a hub for biological rhythms research in the UK, supporting researchers to deliver impact through stakeholder interactions, outreach, training, and resource production. Our research network meets in person at our bi-annual Clock Clubs where hundreds of academics from around the country come together to share their research, learn new skills, and connect with members of the community. 
+      url: "https://www.bioclocks.uk"
+  description: I coordinate our national research network- BioClocks UK. BioClocks UK is a hub for biological rhythms research in the UK, supporting researchers to deliver impact through stakeholder interactions, outreach, training, and resource production. Our research network meets in person at our bi-annual Clock Clubs where hundreds of academics from around the country come together to share their research, learn new skills, and connect with members of the community.
 
 
 - name: Zainullah Bacha 
