@@ -9,6 +9,7 @@ _layouts/homelay.html
 - header
 _includes/header.html
 
+
 - footer
 _includes/footer.html
 
