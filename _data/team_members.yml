@@ -20,7 +20,7 @@
 
 - name: Dr Susanna Campesan
   role: postdoc
-  photo:
+  photo: sus.png
   orcid:  
   description:  
 
@@ -54,7 +54,7 @@
 
 - name: Dr Emily Sample 
   role: postdoc 
-  photo:  
+  photo:  emily.png
   orcid:  
   description:  
 
