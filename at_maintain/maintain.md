@@ -9,6 +9,7 @@ _layouts/homelay.html
 - header
 _includes/header.html
 
+/Home/Team/Vacacies/Research/Pictures
 
 - footer
 _includes/footer.html
