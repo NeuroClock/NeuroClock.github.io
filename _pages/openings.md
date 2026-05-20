@@ -11,10 +11,10 @@ permalink: /vacancies
 We are always on the look out for motivated undergraduate students and PostDoc interested in joining our research groups. We have a wide range of expertise and projects on offer, using different model and non-model organisms. 
 
 
-If you are interested please get in touch with us Bambos (cpk@le.ac.uk) Ezio (er6@le.ac.uk)
+# If you are interested please get in touch with us Bambos (cpk@le.ac.uk) Ezio (er6@le.ac.uk)
 
 
-Find below a list of fellowships:
+## Find below a list of fellowships:
 
 * [Royal Society Newton Fellowship](https://royalsociety.org/grants-schemes-awards/grants/newton-international/)
 * [EMBO long term](https://www.embo.org/funding-awards/fellowships/postdoctoral-fellowships)
