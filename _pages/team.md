@@ -1,5 +1,5 @@
 ---
-title: "Clock Lab - Team"
+title: "NeuroClock Lab - Team"
 layout: gridlay
 excerpt: "Clock Lab: Team members"
 sitemap: false
