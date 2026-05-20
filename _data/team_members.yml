@@ -32,7 +32,7 @@
 
 - name: Dr Filippo Nicolini 
   role: postdoc 
-  photo: Filippo Nicolini.jpg 
+  photo: filippo.jpg 
   orcid: 0000-0002-3749-3932
   websites:
     - label: "Personal_web"
@@ -70,7 +70,7 @@
 - name: Lorena Rosen 
   role: postdoc
   role2: BioClocks UK Coordinator
-  photo: Lorena_R b+w.jpg
+  photo: lorena.jpg
   website:
     - label: "LinkedIn"
       url: https://www.linkedin.com/in/lorena-rosen-429012174/ 
@@ -81,7 +81,7 @@
 
 - name: Zainullah Bacha 
   role: PhD
-  photo: Zainullah Bacha.pdf 
+  photo: zain.png 
   orcid: 0009-0006-1786-1773 
   websites:
     - label: LinkedIn
