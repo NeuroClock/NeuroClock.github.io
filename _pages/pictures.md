@@ -1,8 +1,8 @@
 ---
-title: "Allan Lab - Pictures"
+title: "NeuroClock Lab - Pictures"
 layout: piclay
-excerpt: "Allan Lab -- Pictures"
-permalink: /old.pictures/
+excerpt: "NeuroClock Lab -- Pictures"
+permalink: /pictures/
 ---
 
 # Pictures
