@@ -6,24 +6,15 @@ sitemap: false
 permalink: /
 ---
 
-**News: Our group moved to Hodgkin (UoL) the 6th floor!**
 
-We research clocks in Neurons at [UoL ggc](https://le.ac.uk/ggb). 
+In our NeuroClock laboratory at the University of Leicester we are interested in behaviour, which we use as a convenient tool for the analysis of the nervous system. 
+  
 
-Our PIs:
-- Bambos
-- Ezio
+Over the years, our laboratory has been particularly involved in studying 24 hour circadian behavioural rhythms in invertebrates, and in particular in the fruitfly Drosophila melanogaster. 
 
-Our animals:  
-- Fruit fly
-- Black sodier fly
-- Comb jellies
-- Mosquitoes
 
-Our genes:
-- Clock genes
-- Opsin genes
-- Magnetoreceptor
+We are interested in the genes that regulate the clock and we study them by characterising their function, their evolution, and their expression. We are focused on how neurons expressing clock genes are organised and how circadian information flows through their network. More recently we have also started analysing other complex behaviours such as learning and memory, courtship, sleep, magnetoreception, and aggression. 
+
 
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
     <!-- Menu -->
