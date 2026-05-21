@@ -1,6 +1,6 @@
-- name: Professor Bambos
+- name: Professor Charalambos Kyriacou
   role: pi
-  photo: bambos.png
+  photo: old.bambos.png
   tittle: Professor
   email: cpk@leicester.ac.uk
   orcid: 0000-0003-4889-7606
@@ -8,9 +8,9 @@
     - label: "Personal_web"
       url: "https://le.ac.uk/people/charalambos-kyriacou"
 
-- name: Professor Ezio
+- name: Professor Ezio Rosato
   role: pi
-  photo: ezio.jfif
+  photo: old.ezio.jfif
   tittle: Professor
   email: er6@leicester.ac.uk
   orcid: 0000-0001-7297-4697
@@ -20,7 +20,7 @@
 
 - name: Dr Susanna Campesan
   role: postdoc
-  photo: sus.png
+  photo: old.sus.png
   orcid:  
   description:  
 
@@ -41,20 +41,20 @@
 
 - name: Dr Jess Ramsay 
   role: postdoc 
-  photo: jesica.png
+  photo: old.jesica.png
   orcid:  
   description:  
 
 - name: Dr Christiane Reick 
   role: postdoc 
-  photo: chris.png
+  photo: old.chris.png
   orcid:  
   description:  
 
 
 - name: Dr Emily Sample 
   role: postdoc 
-  photo:  emily.png
+  photo:  old.emily.png
   orcid:  
   description:  
 
@@ -81,12 +81,12 @@
 
 - name: Aniela Wroblewska 
   role: PhD
-  photo:  aniela.png
+  photo:  old.aniela.png
   orcid: 0009-0009-7442-7561
   websites:
     - label: LinkedIn
       url: "https://www.linkedin.com/in/aniela-wroblewska-78772922a/"
-  description: I am a MIBTP PhD student working on development of meal insects for the production of high value biologicals. My project aims to develop black soldier fly (BSF) Hermetia illucens as an efficient and scalable platform to produce proteins. In my work, I use variety of systems including E.coli, D. melanogaster and mammalian cell lines. 
+  description: I am a MIBTP PhD student working on development of meal insects for the production of high value biologicals. My project aims to develop black soldier fly (BSF) Hermetia illucens as an efficient and scalable platform to produce proteins. In my work, I use variety of systems including E.coli and D. melanogaster. 
 
 - name: Zainullah Bacha 
   role: PhD
@@ -108,7 +108,7 @@
 
 - name: Yi Liao 
   role: PhD
-  photo: yi.png
+  photo: old.yi.png
   orcid:  
   description:  
 
@@ -117,4 +117,3 @@
   photo: Frannie.jpg 
   orcid: 0009-0006-7807-399X 
   description: I work on understanding the mysterious presence of some of the circadian rhythm genes in the developing Drosophila embryo, and uncovering which gene regulatory networks they may be involved in. 
-
