@@ -54,7 +54,7 @@
 
 - name: Dr Emily Sample 
   role: postdoc 
-  photo:  old.emily.png
+  photo:  Emily.png
   orcid:  
   website:
     - label: "LinkedIn"
