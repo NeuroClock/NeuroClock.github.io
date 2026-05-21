@@ -33,12 +33,12 @@ We are interested in the genes that regulate the clock and we study them by char
         <div class="item active">
             <img src="{{ site.url }}{{ site.baseurl }}/images/lab_pic/show/bambos.png" alt="Slide 1" />
         </div>
-        <div class="item">
+        <!-- <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/lab_pic/show/eury_tidal.jpg" alt="Slide 2" />
         </div>
         <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/lab_pic/show/bambos_magnetic.webp" alt="Slide 3" />
-        </div>
+        </div> -->
         <!-- <div class="item">
             <img src="{{ site.url }}{{ site.baseurl }}/images/slider7001400/lab.jpg" alt="Slide 4" />
         </div>
