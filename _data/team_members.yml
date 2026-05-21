@@ -56,7 +56,10 @@
   role: postdoc 
   photo:  old.emily.png
   orcid:  
-  description:  
+  website:
+    - label: "LinkedIn"
+      url: "linkedin.com/in/emilysample08 "
+  description:  The Earth’s magnetic field is used by many animals, providing navigational cues which allow the likes of birds and sea turtles to migrate large distances. But what if the ability to sense and respond to magnetic fields is not just specific to migrating organisms, but is instead more universal? To answer this question, I use the fruit fly Drosophila melanogaster to explore how the protein Cryptochrome mediates animal magnetoreception. Using a combination of electrophysiology and microscopy, I specifically look at how neurons respond to magnetic fields. 
 
 - name: Dr Dongfeng Wang 
   role: postdoc
