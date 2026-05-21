@@ -13,7 +13,9 @@ We are always on the look out for motivated undergraduate students and PostDoc i
 
 ## If you are interested
 
-please get in touch with us Bambos (cpk@le.ac.uk) and Ezio (er6@le.ac.uk)
+please get in touch with:
+
+Professor Charalambos Kyriacou (cpk@le.ac.uk) and Professor Ezio Rosato (er6@le.ac.uk)
 
 
 ## Find below a list of fellowships:
