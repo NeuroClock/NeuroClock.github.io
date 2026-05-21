@@ -60,8 +60,6 @@ We are interested in the genes that regulate the clock and we study them by char
 </div>
 
 
-We are researching Clocks and magnetic sensors.
-
 **We are looking for passionate new PhD students, Postdocs, and Master students to join the team [(more info)](https://neuroclock.github.io/vacancies)**!
 
 <figure class="fifth">
