@@ -1,0 +1,300 @@
+---
+layout: default
+title: Lab Videos
+permalink: /videos/
+---
+
+<style>
+  .vw-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+  .vw-header { margin-bottom: 40px; }
+  .vw-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    letter-spacing: -.03em;
+    margin: 0 0 8px;
+  }
+  .vw-header p { color: #666; font-size: 1rem; margin: 0 0 24px; }
+
+  /* filter pills */
+  .vw-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+  .vw-pill {
+    background: #f0f0f0;
+    border: 1.5px solid transparent;
+    border-radius: 100px;
+    color: #555;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: inherit;
+    padding: 5px 14px;
+    transition: all .18s;
+  }
+  .vw-pill:hover { background: #e4e4e4; }
+  .vw-pill.active { background: #000; border-color: #000; color: #fff; }
+
+  /* one video per row */
+  .vw-list { margin-top: 32px; display: flex; flex-direction: column; gap: 0; }
+
+  .vw-row {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 0;
+    border-top: 1px solid #e8e8e8;
+    padding: 24px 0;
+    align-items: start;
+  }
+  .vw-row:last-child { border-bottom: 1px solid #e8e8e8; }
+  .vw-row[hidden] { display: none; }
+
+  /* thumbnail with play */
+  .vw-thumb-wrap {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #111;
+    aspect-ratio: 16/9;
+  }
+  .vw-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter .25s;
+  }
+  .vw-thumb-wrap:hover img { filter: brightness(.6); }
+  .vw-play-btn {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  .vw-thumb-wrap:hover .vw-play-btn { opacity: 1; }
+  .vw-play-circle {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.92);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .vw-play-circle svg { margin-left: 3px; }
+
+  /* text side */
+  .vw-info { padding: 0 0 0 28px; }
+  .vw-tag {
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 0 0 8px;
+  }
+  .vw-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0 0 10px;
+    color: #111;
+  }
+  .vw-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: #555;
+    margin: 0 0 14px;
+  }
+  .vw-date { font-size: 12px; color: #aaa; margin: 0; }
+
+  /* lightbox */
+  .vw-lb {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.88);
+    display: none; align-items: center; justify-content: center;
+    z-index: 9999; padding: 20px;
+  }
+  .vw-lb.open { display: flex; }
+  .vw-lb-inner { width: 100%; max-width: 840px; position: relative; }
+  .vw-lb-video { position: relative; padding-top: 56.25%; border-radius: 10px; overflow: hidden; background: #000; }
+  .vw-lb-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .vw-lb-info { margin-top: 16px; color: #fff; }
+  .vw-lb-title { font-size: 1.1rem; font-weight: 600; margin: 0 0 6px; }
+  .vw-lb-desc { font-size: 14px; color: rgba(255,255,255,.7); margin: 0; line-height: 1.6; }
+  .vw-lb-close {
+    position: absolute; top: -40px; right: 0;
+    background: none; border: none; color: #fff;
+    font-size: 28px; cursor: pointer; padding: 4px 8px; opacity: .8;
+  }
+  .vw-lb-close:hover { opacity: 1; }
+
+  .vw-empty { display: none; padding: 64px 0; text-align: center; color: #999; font-size: 14px; }
+
+  @media (max-width: 640px) {
+    .vw-row { grid-template-columns: 1fr; }
+    .vw-info { padding: 16px 0 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .vw-thumb-wrap img, .vw-play-btn { transition: none; }
+  }
+</style>
+
+<div class="vw-page">
+  <header class="vw-header">
+    <h1>Lab Videos</h1>
+    <p>Talks, experiments, and behind-the-scenes footage from our group.</p>
+    <div class="vw-filters" id="vw-filters"></div>
+  </header>
+  <div class="vw-list" id="vw-list"></div>
+  <p class="vw-empty" id="vw-empty">No videos match that filter.</p>
+</div>
+
+<div class="vw-lb" id="vw-lb" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="vw-lb-inner">
+    <button class="vw-lb-close" id="vw-lb-close" aria-label="Close">×</button>
+    <div class="vw-lb-video">
+      <iframe id="vw-lb-iframe" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="vw-lb-info">
+      <p class="vw-lb-title" id="vw-lb-title"></p>
+      <p class="vw-lb-desc"  id="vw-lb-desc"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+//  ADD / REMOVE videos here.
+//
+//  platform : "youtube" or "vimeo"
+//  id       : the video ID from the URL
+//  tag      : used for filter buttons — invent any labels you like
+// ─────────────────────────────────────────────────────────────
+const VIDEOS = [
+  {
+    title:       "Introduction to Our Research",
+    description: "A five-minute overview of the central questions driving our lab, the model systems we use, and where we hope to go in the next few years.",
+    tag:         "Overview",
+    platform:    "youtube",
+    id:          "dQw4w9WgXcQ",
+    date:        "March 2024",
+  },
+  {
+    title:       "Live Cell Imaging — 48 h Time-lapse",
+    description: "Forty-eight hours of single-cell dynamics compressed into ninety seconds, captured on our spinning-disk confocal at 37 °C.",
+    tag:         "Experiment",
+    platform:    "youtube",
+    id:          "dQw4w9WgXcQ",
+    date:        "June 2024",
+  },
+  {
+    title:       "Annual Symposium Talk",
+    description: "Full recording of our presentation at the departmental symposium, covering our latest findings on membrane dynamics and the open questions ahead.",
+    tag:         "Talk",
+    platform:    "vimeo",
+    id:          "76979871",
+    date:        "September 2024",
+  },
+  {
+    title:       "Lab Tour",
+    description: "Step inside the lab, meet the team, and get a look at the microscopes, bioreactors, and data pipelines that power our day-to-day work.",
+    tag:         "Behind the scenes",
+    platform:    "youtube",
+    id:          "dQw4w9WgXcQ",
+    date:        "January 2025",
+  },
+  {
+    title:       "Methods: Single-molecule FISH",
+    description: "A walk-through of our smFISH protocol — from probe design to image analysis — for anyone looking to adopt the technique in their own lab.",
+    tag:         "Methods",
+    platform:    "youtube",
+    id:          "dQw4w9WgXcQ",
+    date:        "March 2025",
+  },
+];
+
+function embedURL(v) {
+  return v.platform === "vimeo"
+    ? `https://player.vimeo.com/video/${v.id}?autoplay=1`
+    : `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1`;
+}
+function thumbURL(v) {
+  return v.platform === "vimeo"
+    ? `https://vumbnail.com/${v.id}.jpg`
+    : `https://img.youtube.com/vi/${v.id}/mqdefault.jpg`;
+}
+
+const list   = document.getElementById("vw-list");
+const fbar   = document.getElementById("vw-filters");
+const empty  = document.getElementById("vw-empty");
+const lb     = document.getElementById("vw-lb");
+const iframe = document.getElementById("vw-lb-iframe");
+const lbT    = document.getElementById("vw-lb-title");
+const lbD    = document.getElementById("vw-lb-desc");
+let   active = "All";
+
+const tags = ["All", ...new Set(VIDEOS.map(v => v.tag))];
+tags.forEach(tag => {
+  const btn = document.createElement("button");
+  btn.className = "vw-pill" + (tag === "All" ? " active" : "");
+  btn.textContent = tag;
+  btn.addEventListener("click", () => {
+    active = tag;
+    fbar.querySelectorAll(".vw-pill").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    render();
+  });
+  fbar.appendChild(btn);
+});
+
+function render() {
+  list.innerHTML = "";
+  const shown = VIDEOS.filter(v => active === "All" || v.tag === active).reverse();
+  empty.style.display = shown.length ? "none" : "block";
+  shown.forEach(v => {
+    const row = document.createElement("div");
+    row.className = "vw-row";
+    row.innerHTML = `
+      <div class="vw-thumb-wrap">
+        <img src="${thumbURL(v)}" alt="${v.title}" loading="lazy">
+        <div class="vw-play-btn">
+          <div class="vw-play-circle">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4.5 2.5l10 5.5-10 5.5V2.5z" fill="#111"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="vw-info">
+        <p class="vw-tag">${v.tag}</p>
+        <p class="vw-title">${v.title}</p>
+        <p class="vw-desc">${v.description}</p>
+        <p class="vw-date">${v.date}</p>
+      </div>`;
+    row.querySelector(".vw-thumb-wrap").addEventListener("click", () => open(v));
+    list.appendChild(row);
+  });
+}
+
+function open(v) {
+  iframe.src = embedURL(v);
+  lbT.textContent = v.title;
+  lbD.textContent = v.description;
+  lb.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function close() {
+  lb.classList.remove("open");
+  iframe.src = "";
+  document.body.style.overflow = "";
+}
+
+document.getElementById("vw-lb-close").addEventListener("click", close);
+lb.addEventListener("click", e => { if (e.target === lb) close(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+
+render();
+</script>
